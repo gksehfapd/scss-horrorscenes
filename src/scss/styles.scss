@@ -1,0 +1,116 @@
+@import "reset";
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  width: 33%;
+  height: 100%;
+  padding: 10vh 0 72px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: $red;
+  h1 {
+    font-size: 75px;
+    width: 50%;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  h3,
+  p {
+    width: 80%;
+    text-align: justify;
+  }
+  p {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    width: 80%;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        margin-right: 10px;
+        font-size: 20px;
+        color: black;
+        opacity: 0.5;
+        padding-bottom: 2px;
+        border-bottom: 2px solid rgba(0, 0, 0, 1);
+        margin-bottom: 5px;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  h5 {
+    margin-top: 15px;
+    color: black;
+    opacity: 0.5;
+    font-size: 12px;
+    width: 80%;
+  }
+}
+
+main {
+  margin-left: 33%;
+
+  background: $red;
+  .movie {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 1%,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+      )
+      $red;
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    .wrapper {
+      width: 70%;
+      .movie__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        align-items: flex-end;
+        h3 {
+          font-size: 35px;
+          text-transform: uppercase;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      box-shadow: 0 80px 80px -80px #000, 0 0 12px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
